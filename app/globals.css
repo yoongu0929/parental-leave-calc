@@ -293,6 +293,38 @@ h2 {
   color: #fff;
 }
 
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--pine);
+  background: transparent;
+  color: var(--pine);
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: var(--mint);
+}
+
+.feedback {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.feedback-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.0625rem;
+}
+
+.feedback-body {
+  margin: 0 0 0.875rem;
+  max-width: 34rem;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
 /* tables */
 .table-wrap {
   margin-top: 1.5rem;

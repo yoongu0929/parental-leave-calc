@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import './globals.css';
 import { BENEFIT_CONFIG, OFFICIAL_LINKS } from '@/config/benefit';
+import { FEEDBACK_URL } from '@/config/site';
 
 export const metadata: Metadata = {
   title: '육아휴직 급여 계산기 — 월별 예상 지급액',
@@ -39,9 +41,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 고용24
               </a>
             </p>
-            <p>입력한 내용은 서버로 전송되거나 저장되지 않아요.</p>
+            {FEEDBACK_URL && (
+              <p>
+                <a href={FEEDBACK_URL} target="_blank" rel="noopener noreferrer">
+                  의견 보내기
+                </a>
+              </p>
+            )}
+            <p>
+              입력한 내용은 서버로 전송되거나 저장되지 않아요. 방문 통계는 개인을 알아볼 수 없는
+              방식으로만 집계해요.
+            </p>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );

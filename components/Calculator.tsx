@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import FeedbackCard from './FeedbackCard';
 import ResultSummary from './ResultSummary';
 import ResultTable from './ResultTable';
 import WageForm from './WageForm';
@@ -102,6 +103,7 @@ export default function Calculator() {
           )}
           <ResultSummary result={result.data} months={result.months} />
           <ResultTable rows={result.data.rows} />
+          <FeedbackCard />
         </section>
       )}
     </>
